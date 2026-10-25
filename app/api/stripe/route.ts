@@ -47,13 +47,13 @@ export async function GET() {
       mode: "subscription",
       success_url: settingsUrl,
       cancel_url: settingsUrl,
-      payment_method_types: ["card"],
+      allowed_payment_method_types: ["card"],
       billing_address_collection: "auto",
       customer_email: user.email,
       line_items: [
         {
           price_data: {
-            currency: "USD",
+            currency: "usd",
             product_data: {
               name: "Social X Pro",
               description: "Unlimited access to premium services",
